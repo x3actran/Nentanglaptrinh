@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tạo form cơ bản</title>
+    <style>
+        .wufoo {
+        font-family: "Lucida Grande","Lucida Sans Unicode", Tahoma, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <form method="get" action="simpleform.html" class = "wufoo">
+        <fieldset width="20" height="60">
+       <h2><span style="color: blue ;">Bảng thức ăn và giá</span></h2>
+       <p>Mua gì hôm nay?</p>
+       <select>
+         <option value = "  ">A Gà rán</option>
+         <option>B Beefsteak</option>
+         <option>C Spagetti</option>
+      </select>
+      <p>Phần ăn lớn hay nhỏ?</p>
+         <input type="radio" name="rd"/> 1 - lớn 120k <br/>
+         <input type="radio" name="rd"/> 2 - nhỏ 60k <br/>
+      <p>Họ và Tên <span style="color: red">*</span> </p>
+         <input type = "text" name="lastname" placeholder="Họ" size="15"/>
+         <input type = "text" name="firstname" placeholder="Tên" size="15"/>
+      <p>Email <span style="color: red">*</span> </p>
+         <input type = "text" name="email" size="35"/>
+      <p>Số điện thoại <span style="color: red">*</span> </p>
+      <input type = "text" name="phone1" size="35"/>
+      <p><a href="https://www.lotteria.vn/"><input type = "button"  name="btSubmit"  value="Đặt hàng" /></a></p>
+       </fieldset>
+     </form>
+</body>
+</html>
