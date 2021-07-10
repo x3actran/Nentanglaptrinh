@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+<!-- cách 1: nhúng trực tiếp -->
+    <button onclick="alert('Xin chào!')"> Click </button>
+
+<!-- cách 2: sử dụng thẻ script -->
+    <button onclick="hello()"> Click </button>
+    <script>
+    function hello() {
+        alert('Xin chào!');
+    }
+    
+</script>
+
+<!-- cách 3: sử dụng file script -->
+    <button onclick="hello()"> Click </button>
+    <script src="cachnhung.js"></script>
+    
+</body>
+</html>
+
+
+
