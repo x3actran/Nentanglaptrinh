@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tính lãi đơn</title>
+</head>
+<body>
+    <script>
+        let soTiengui = prompt ("số tiền gửi: ");
+        soTiengui = parseInt (soTiengui);
+        let laiSuatnam = prompt ("lãi suất trên năm: ");
+        laiSuatnam = parseInt (laiSuatnam);
+        let soNam = prompt ("thời gian gửi: ");
+        soNam = parseInt (soNam);
+
+        let laiNhanduoctrennam = soTiengui * (laiSuatnam / 100);
+        let tienNhanduoc = soTiengui + laiNhanduoctrennam * soNam;
+        document.write ('Số tiền thực lãnh: ' + tienNhanduoc);
+
+    </script>
+</body>
+</html>
