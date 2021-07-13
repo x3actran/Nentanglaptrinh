@@ -16,8 +16,12 @@
         soNam = parseInt (soNam);
 
         let laiNhanduoctrennam = soTiengui * (laiSuatnam / 100);
+        laiNhanduoctrennam = parseFloat (laiNhanduoctrennam);
         let tienNhanduoc = soTiengui + laiNhanduoctrennam * soNam;
-        document.write ('Số tiền thực lãnh: ' + tienNhanduoc);
+
+        document.write ('Số tiền lãi nhận được: ' + laiNhanduoctrennam + ' triệu');
+        document.write ('<br/>');
+        document.write ('Số tiền thực lãnh: ' + tienNhanduoc + ' triệu');
 
     </script>
 </body>
