@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="number" id="number1">
+    <input type="number" id="number2">
+    <br/>
+    <br/>
+    <br/>
+    <span><button onclick="plus()">+</button></span>
+    <span><button onclick="detract()">-</button></span>
+    <span><button onclick="multiple()">x</button></span>
+    <span><button onclick="divide()">/</button></span>
+    <p id="result"></p>
+
+    <script>
+        function plus(){
+            let number1 = +document.getElementById("number1").value;
+            let number2 = +document.getElementById("number2").value;
+            let sum = number1 + number2;
+            document.getElementById("result").innerHTML = sum;
+        }
+
+        function detract(){
+            let number1 = +document.getElementById("number1").value;
+            let number2 = +document.getElementById("number2").value;
+            let sum = number1 - number2;
+            document.getElementById("result").innerHTML = sum;
+        }
+
+        function multiple(){
+            let number1 = +document.getElementById("number1").value;
+            let number2 = +document.getElementById("number2").value;
+            let sum = number1 * number2;
+            document.getElementById("result").innerHTML = sum;
+        }
+
+        function divide(){
+            let number1 = +document.getElementById("number1").value;
+            let number2 = +document.getElementById("number2").value;
+            let sum = number1 / number2;
+            document.getElementById("result").innerHTML = sum;
+        }
+    </script>
+</body>
+</html>
