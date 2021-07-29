@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1><b>Tính điểm khối D</b></h1>
+    <br> <br>
+    <p><span style="color: blue;" >Môn Toán</span></p>
+    <input type="number" id="toan" placeholder="nhập điểm Toán đi">
+    <br> <br>
+    <p><span style="color: blue;" >Môn Văn</span></p>
+    <input type="number" id="van" placeholder="nhập điểm Văn nữa">
+    <br> <br>
+    <p><span style="color: blue;" >Môn Anh</span></p>
+    <input type="number" id="anh" placeholder="nhập điểm Anh nữa nè">
+    <br> <br>
+    <p><span style="color: red;" >Khu vực ưu tiên</span></p>
+    <select id="uu_tien">
+        <option value="KV1">KV1</option>
+        <option value="KV2-NT">KV2-NT</option>
+        <option value="KV2">KV2</option>
+        <option value="KV3">KV3</option>
+    </select>
+    <br> <br>
+    <button onclick="tinh_diem()">Tính điểm</button>
+    <p id="ket_qua"></p>
+
+    <script src="diemdaihockhoid.js"></script>
+
+</body>
+</html>
