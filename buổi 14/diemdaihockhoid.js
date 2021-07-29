@@ -6,8 +6,6 @@ function tinh_diem() {
 
     let uu_tien = document.getElementById("uu_tien").value;
     
-    
-
     switch (uu_tien) {
         case 'KV1':
             uu_tien = 0.75;
@@ -22,7 +20,8 @@ function tinh_diem() {
             uu_tien = 0;
             break;
     }
+
     let tong = toan + van + anh + uu_tien;
-    
+
     document.getElementById("ket_qua").innerHTML = "Điểm tổng của bạn là: " + tong;
 }
