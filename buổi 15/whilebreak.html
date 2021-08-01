@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let pass = prompt("Hãy nhập mật khẩu");
+        let count_wrong = 0;
+        while (pass !== "123456") {
+            count_wrong ++
+            if (count_wrong == 5) {
+                break;
+            }
+            alert("Mật khẩu sai.Xin vui lòng nhập lại");
+            pass = prompt("Hãy nhập mật khẩu");
+
+        if (count_wrong ==5) {
+            document.write("Bạn đã nhập sai quá 5 lần");
+        } else {
+            document.write("Mật khẩu đúng");
+        }
+        }
+    </script>
+</body>
+</html>
