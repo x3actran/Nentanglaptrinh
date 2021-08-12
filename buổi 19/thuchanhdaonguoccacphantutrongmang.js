@@ -1,12 +1,13 @@
 function dao_nguoc() {
-    let arr = [1,2,3,4,5,6];
+    let x = [-3, 5, 1, 3, 2, 10];
     let first = 0;
-    let last = arr.length - 1;
-    let arr_new = [];
-    for (first; first < last; first++, last--) {
-        let b = arr[first]; 
-        arr[first] = arr[last];
-        arr[last] = b; 
+    let last = x.length - 1;
+    while (first < last) {
+        let b = x[first];
+        x[first] = x[last];
+        x[last] = b;
+        first++;
+        last--;
     }
-    document.write(arr); 
+    document.write(x);
 }
