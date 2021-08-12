@@ -1,19 +1,17 @@
-let array = Array("Nguyen Van A","Nguyen Van B");
+let x = 0;
+let array = new Array();
 
 function add_element_to_array() {
-    console.log(document.getElementById("txtValue").value)
-    array.push(document.getElementById("txtValue").value);
-    alert("Hoc sinh: " + array[array.length-1]);
-}
-
-function delete_last_element() {
-    array.pop();
+    array[x] = document.getElementById("txtValue").value;
+    alert("Element: " + array[x] + " Added at index " + x);
+    x++;
+    document.getElementById("txtValue ").value = "";
 }
 
 function display_array() {
     let e = "<hr/>";
     for (let i = 0; i < array.length; i++) {
-    e += "Số thứ tự học sinh  " + array[i] + "  là:  " + i + "<br/>";
+        e += "Element " + i + " = " + array[i] + "<br/>";
     }
-document.getElementById("result").innerHTML = e;
+    document.getElementById("result").innerHTML = e;
 }
