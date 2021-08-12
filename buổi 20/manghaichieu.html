@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let arr = [
+            [1,2,3],
+            [4,5,6],
+            [7,8,9]
+        ];
+        let total = 0;
+        for ( let i=0; i<arr.length; i++){
+            for (let j=0; j<arr[i].length; j++){
+                total += arr[i] [j]
+            }
+        }
+        document.write("Tổng các phần tử trong mảng là: " + total);
+        document.write("<br/>" + "<br/>");
+
+        for ( let j=0; j<arr[0].length; j++){
+            let total_column = 0;
+            for ( let i=0; i<arr[j].length; i++){
+                total_column += arr[i][j]
+            }
+            document.write("Tổng của cột " + j + " là: " + total_column + "<br/>");
+        }
+        document.write("<br/" + "<br/>");
+
+        let arr_row = [];
+        for ( let i=0; i<arr.length; i++){
+            let total_row = 0;
+            for ( let j=0; j<arr[i].length; j++){
+                total_row += arr[i][j]
+            }
+            document.write("Tổng của hàng " + i + " là: " + total_row + "<br/>");
+        }
+        document.write("<br/>");
+
+        let max = arr_row[0];
+        let index = 0;
+        for ( let a=1; a<arr_row.length; a++) {
+            if (max < arr_row[a]) {
+                max = arr_row[a];
+                index = a;
+            }
+        }
+        document.write("Hàng " + index + " có tổng lớn nhất là: " + max);
+
+    </script>
+
+</body>
+</html>
