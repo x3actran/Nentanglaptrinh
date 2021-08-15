@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="number" name="first" id="num1">
+    <br>
+    <input type="number" name="second" id="num2">
+    <br>
+    <button onclick="tinh_tong()">Tính tổng</button>
+    <br>
+    <p id="result"></p>
+
+    <script>
+        function tinh_tong() {
+            let a = document.getElementById("num1").value;
+            let b = document.getElementById("num2").value;
+            let tong = a + b ;
+
+            document.getElementById("result").innerHTML = "Tổng là: " + tong;
+        }
+
+    </script>
+</body>
+</html>
