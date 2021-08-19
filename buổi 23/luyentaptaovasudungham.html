@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // alert ("Xin chào");
+
+        // function cong_so(x) {
+        //     var y = x + 1;
+        //     return y ;    
+        // }
+
+        // function main() {
+        //     var x = parseInt(prompt("Nhập số"));
+        //     console.log(cong_so(x));
+        // }
+        // main();
+
+
+
+        function hai_so( num1, num2) {
+            if (  num1 > num2 ) {
+                alert("số thứ nhất lớn hơn số thứ hai");
+            } else if ( num1 <= num2 ) {
+                var sum = num1 + num2;
+                return sum;
+            }
+        }
+
+        function main() {
+            var num1 = parseInt(prompt("Nhập số thứ nhất"));
+            var num2 = parseInt(prompt("Nhập số thứ hai"));
+            document.write(hai_so(num1,num2));
+        }
+        main();
+
+    </script>
+</body>
+</html>
