@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chuyển đổi nhiệt độ</title>
+</head>
+<body>
+    <h1>Chuyển đổi nhiệt độ</h1>
+    <br>
+    <p>Hãy nhập độ F vào  chỗ dưới này để chuyển thành độ C</p>
+    <br>
+    <label>Độ F là:</label>
+    <input type="number" id="doF" placeholder="Hãy nhập độ F vào đây" 
+        oninput="temperatureConverter(this.value)" >
+    <br>  
+    <p>Độ C: <span id="hien_thi_do_C" ></span></p>
+
+    <script>
+        function temperatureConverter(valNum) {
+            valNum = parseFloat(valNum);
+        document.getElementById("hien_thi_do_C").innerHTML = (valNum-32) / 1.8;
+    }
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chuyển đổi qua lại giữa feet và meters</title>
+</head>
+<body>
+    <h1>Chuyển đổi qua lại giữa feet và meters</h1>
+    <br> <br>
+    <input type="number" id="feet" placeholder="Hãy nhập feet vào đây" 
+        oninput="feet_to_meters(this.value)" >
+    <br> <br>
+    <input type="number" id="meters" placeholder=" Hãy nhập meters vào đây"
+        oninput="meters_to_feet(this.value)" >
+    <br>
+    <p id="hien_thi_feet"></p>
+    <br>
+    <p id="hien_thi_meters"></p>
+
+    <script>
+        function feet_to_meters(valFeet) {
+            valMeters = valFeet * 0,305;
+        document.getElementById("hien_thi_meters").innerHTML = "meters = " + valMeters;
+        }
+
+        function meters_to_feet(valMeters) {
+            valFeet = valMeters * 3,279;
+        document.getElementById("hien_thi_feet").innerHTML = "feet = " + valFeet;
+        }
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kiểm tra số nguyên tố</title>
+</head>
+<body>
+    <h1>Kiểm tra xem số nào là số nguyên tố đây</h1>
+
+    <script>
+        var num = parseInt(prompt("Nhập số đi"));
+        function isPrime(num) {
+            var count = 0;
+            var isPrime = false;
+                if ( num == 0) {
+                    alert(num + "Không phải số nguyên tố")
+                } else {
+                    for ( let i=1; i<=num; i++) {
+                        if ( num % i == 0 ){
+                            count += 1;
+                        }
+                    }
+                    if ( count = 2 ) {
+                        isPrime = true;
+                    }
+                    if (isPrime) {
+                        alert(num + " là số nguyên tố")
+                    } else {
+                        alert(num + " không phải là số nguyên tố")
+                    }
+                }   
+        }
+
+    </script>
+</body>
+</html>
