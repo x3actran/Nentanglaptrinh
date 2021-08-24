@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="star" placeholder="Nhập tên ngôi sao bằng tiếng Anh đi">
+    <button onclick="star_cons()">Tra</button>
+    <br> <br>
+    <p id="hien_thi"></p>
+
+    <script>
+        var arr_star = ["Polaris", "Aldebaran", "Deneb", "Vega", "Altair", "Dubhe", "Regulus"];
+        var arr_constellation = ["Ursa Minor", "Tarurus", "Cygnus", "Lyra", "Aquila", "Ursa Major", "Leo"];
+
+        function star_cons() {
+            var star = document.getElementById("star").value;
+            
+            var index_star = 0;
+            var result = "";
+            for (var i = 0; i < arr_star.length; i++) {
+                if (star == arr_star[i]) {
+                    index_star = i;
+                    for(var j = 0; j < arr_constellation.length; j++) {
+                        if (index_star == j) {
+                            result = arr_constellation[j];
+                        }
+                    }
+                }
+            }
+            console.log(result);
+            document.getElementById("hien_thi").innerHTML = result ;
+        }
+
+    </script>
+</body>
+</html>
