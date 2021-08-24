@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // function dientich(bankinh) {
+        //     return bankinh * bankinh * Math.PI;
+        // }
+        // let bankinh = prompt("bán kính là");
+        // document.write("Diện tích hình tròn bán kính " + bankinh + " là: " + dientich(bankinh));
+
+        class hinhtron {
+            bankinh;
+
+            constructor(bankinh) {
+                this.bankinh = bankinh;
+            }
+            getBankinh() {
+                return this.bankinh;
+            }
+            getchuvi() {
+                return this.bankinh * 2 * Math.PI
+            }
+            getdientich() {
+                return this.bankinh * this.bankinh * Math.PI
+            }
+        }
+
+        let hinhtron_1 = new hinhtron(2);
+        let chuvi1 = hinhtron_1.getchuvi();
+        let dientich1 = hinhtron_1.getdientich();
+        document.write("Chu vi hình tròn 1 là: " + chuvi1 + "<br>");
+        document.write("Diện tích hình tròn 1 là: " + dientich1 + "<br>");
+
+        let hinhtron_2 = new hinhtron(6);
+        let chuvi2 = hinhtron_2.getchuvi();
+        let dientich2 = hinhtron_2.getdientich();
+        document.write("Chu vi của hình tròn 2 là: " + chuvi2 + "<br>");
+        document.write("Diện tích của hình tròn 2 là: " + dientich2);
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Date {
+            day;
+            month;
+            year;
+
+            constructor(day, month, year) {
+                this.day = day;
+                this.month = month;
+                this.year = year;
+            }
+            getDay() {
+                return this.day;
+            }
+            getMonth() {
+                return this.month;
+            }
+            getYear() {
+                return this.year;
+            }
+            setDay(new_day) {
+                this.day  = new_day;
+            }
+            setMonth(new_month) {
+                this.month  = new_month;
+            }
+            setYear(new_year) {
+                this.year  = new_year;
+            }
+        }
+
+        let date1 = new Date(20,01,1999);
+        
+        // date1.setDay(20);
+        // date1.setMonth(01);
+        // date1.setYear(2019);
+
+        let day1 = date1.getDay();
+        let month1 = date1.getMonth();
+        let year1 = date1.getYear();
+
+        
+
+        document.write(day1 + "/" + month1 + "/" + year1);
+
+    </script>
+</body>
+</html>

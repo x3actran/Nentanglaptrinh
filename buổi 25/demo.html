@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class car {
+            color;
+            speed;
+
+            move() {
+                document.write ("xe có màu " + this.color + " chạy với tốc độ " + this.speed + "<br>")
+            }
+        }
+
+        let car1 = new car()
+        car1.color = "blue";
+        car1.speed = 60;
+        car1.move()
+
+        let car2 = new car();
+        car2.color = "grey";
+        car2.speed = 60;
+        car2.move()
+
+    </script>
+</body>
+</html>
