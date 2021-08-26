@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mô tả hình chữ nhật</title>
+</head>
+<body>
+    <p id="DemoCanvas"></p>
+    <script>
+        class Rectangle {
+            width;
+            height;
+
+            constructor (width, height) {
+                this.width = width;
+                this.height = height;
+            }
+            getWidth() {
+                return this.width;
+            }
+            getHeight () {
+                return this.height;
+            }
+            setWidth (width) {
+                this.width = width; 
+            }
+            setHeight (height) {
+                this.height = height;
+            }
+            getPerimeter () {
+                return this.width * this.height 
+            }
+            getArea () {
+                return ( this.width + this.height ) * 2
+            }
+        }
+        
+        let rectangle_1 = new Rectangle (60,30);
+        let width_1 = rectangle_1.getWidth;
+        let height_1 = rectangle_1.getHeight;
+
+        rectangle_1.setWidth (160);
+        rectangle_1.getWidth ();
+        rectangle_1.setHeight (60);
+        rectangle_1.getHeight ();
+        document.write(rectangle_1.getWidth() + "<br>" + rectangle_1.getHeight());
+
+        let canvas = document.getElementById("DemoCanvas");
+        let ctx = canvas.getContext('2d');
+        ctx.fillStyle='#fa4b2a';
+        ctx.fillRect(0, 0, width, height)
+
+    </script>
+</body>
+</html>
