@@ -28,7 +28,7 @@
                 return this.status = false;
             }
 
-            noDie() {
+            Alive() {
                 return this.status = true;
             }
 
@@ -51,6 +51,14 @@
 
             getWeightCat() {
                 return this.weight_cat;
+            }
+
+            setSoundCat(sound_cat) {
+                this.sound_cat = sound_cat;
+            }
+
+            getSoundCat() {
+                alert(this.sound_cat);
             }
 
             actionCat(sound) {
@@ -78,7 +86,7 @@
 
         let Rat = new Mouse("Rat", 10, 100);
         let Tom = new Cat("Tom", 20, 200, Rat);
-        Rat.noDie()
+        Rat.Alive()
 
         Tom.catchTheMouse();
         Tom.eatTheMouse();
