@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var arr = [1,2,3,4,5,6,230,20,60,160] ;
+
+        // var max = Math.max.apply(Math, numbers); 
+        // var min = Math.min.apply(Math, numbers);
+
+        // document.write("Số lớn nhất là: " + max + "<br/>");
+        // document.write("Số nhỏ nhất là: " + min);
+
+        function findMin(arr) {
+        var min = arr[0];
+        for (var i = 1; i < arr.length; ++i) {
+            if (arr[i] < min) {
+                min = arr[i];
+            }
+        }
+        return min;
+        }
+
+        function findMax(arr) {
+        var max = arr[0];
+        for (var i = 1; i < arr.length; ++i) {
+            if (arr[i] > max) {
+                max = arr[i];
+            }
+        }
+        return max;
+        }
+        var maxvalue = findMax(arr);
+        document.write("Số lớn nhất là: " + maxvalue + "<br>");
+        var minvalue = findMin(arr);
+        document.write("Số nhỏ nhất là: " + minvalue + "<br>");
+
+        function count(arr, data) {
+        var count = 0;
+        var position = binSearch(arr, data);
+        if (position > -1) {
+            ++count;
+            for (var i = position-1; i > 0; --i) {
+                if (arr[i] == data) {
+                    ++count;
+                }
+                else {
+                    break;
+                }
+            }
+            for (var i = position+1; i < arr.length; ++i) {
+                if (arr[i] == data) {
+                    ++count;
+                }
+                else {
+                    break;
+                }
+            }
+        }
+        return count;
+        }
+        var countnums = count(arr, data);
+        document.write("Số lần xuất hiện của " + position + " là " + countnums);
+    </script>
+</body>
+</html>
