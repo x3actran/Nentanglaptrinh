@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <canvas id="canvas" width="500" height="500" style="border:1px solid #d83a3a;"></canvas>
+
+    <script>
+        class Circle {
+        constructor(x, y, r) {
+            this.x = x;
+            this.y = y;
+            this.r = r;
+            }
+        }
+
+        var circle_1 = new Circle(300, 200, 90);
+        var circle_2 = new Circle(90, 100, 90);
+
+        var ctx = document.getElementById("canvas").getContext("2d");
+        ctx.arc(circle_1.x, circle_1.y, circle_1.r, 0, 2 * Math.PI);
+        ctx.arc(circle_2.x, circle_2.y, circle_2.r, 0, 2 * Math.PI);
+
+        ctx.fillStype = "#d83a3a";
+        ctx.fill();
+
+        class Main {
+            constructor (cr1, cr2) {
+                this.cr1 = cr1;
+                this.cr2 = cr2;
+                this.check = Math.sqrt(Math.pow((this.cr1.x - this.cr2.x),2 + Math.pow(this.cr1.y - this.cr2.y),2));
+            }
+
+            checkCollision() {
+                if (this.check == (this.cr1.r + this.cr2.r)) {
+                   document.write("Hai hình tròn chạm nhau"); 
+                } else if (this.check > (this.cr1.r + this.cr2.r)) {
+                    document.write("Hai hình tròn xa nhau");
+                } else {
+                    document.write("Hai hình tròn lồng nhau");
+                }
+            }
+        }
+
+        var main = new Main(circle_1, circle_2);
+        main.checkCollision();
+
+    </script>
+</body>
+</html>
